@@ -6,3 +6,11 @@ html, body {
     color: white;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.outerContainer {
+    margin: 15px;
+
+    h1 {
+        text-align: center;
+    }
+}
