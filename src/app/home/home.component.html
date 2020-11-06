@@ -30,7 +30,7 @@
                     <mat-form-field appearance="outline">
                         <mat-label>Phone Number</mat-label>
                         <input matInput formControlName="phoneNumber" name="phoneNumber">
-                        <mat-error *ngIf="registerForm.controls.phoneNumber.errors?.required">Enter a valid South African phone number</mat-error>
+                        <mat-error *ngIf="registerForm.controls.phoneNumber.errors?.required || registerForm.controls.phoneNumber.errors?.pattern">Enter a valid phone number</mat-error>
                         <mat-error *ngIf="registerForm.controls.phoneNumber.errors?.minlength || registerForm.controls.phoneNumber.errors?.maxlength">Phone number must be 10 digits</mat-error>
                     </mat-form-field>
 
