@@ -1,16 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { 
-    height: 100%; 
-    background: linear-gradient(45deg, #1c4359, #407a9c);
-    color: white;
-}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+$primary: black;
+// $primary: #f44336;
+$secondary: #ba000d;
+$light: #ff7961;
 
-.outerContainer {
-    margin: 15px;
-
-    h1 {
-        text-align: center;
-    }
+app-root {
+    display: contents !important;
 }
+html,
+body {
+  height: 100%;
+  background: linear-gradient(45deg, #1c4359, #407a9c);
+  color: white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+// .outerContainer {
+//     margin: 15px;
+
+//     h1 {
+//         text-align: center;
+//     }
+// }
+
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p {
+//   margin: 0 !important;
+//   font-weight: 200;
+// }
+
+// .header {
+//   background: linear-gradient(145deg, #1e6c99, #073855);
+//   background: #073855;
+//   box-shadow: 20px 20px 60px #063048,
+//     -20px -20px 60px #084062;
+//   padding: 15px;
+// }
+
+// .header img {
+//   width: 60px;
+//   height: auto;
+// }
+
+// .mainBody {
+//   padding: 45px 25px;
+//   // flex-wrap: wrap-reverse !important;
+// }
+
+// .homeTitles {
+//   padding: 8px 0 20px;
+//   text-align: center;
+// }
+
+// .mat-stepper-horizontal,
+// .mat-stepper-vertical {
+//   background-color: transparent;
+// }
+
+// .mat-vertical-content {
+//   padding-left: 10px !important;
+// }
+
+// .heroBanner img {
+//   width: 100%;
+//   // max-width: 380px;
+// }
+
+// .orderDiv .mat-icon {
+//   margin-bottom: 15px;
+//   cursor: pointer;
+// }
+
+// input[type="number"]::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+// }
+
+// .mat-raised-button {
+//   background-color: $primary;
+// }
+
+// .disableTouch {
+//   color: grey;
+//   cursor: no-drop !important;
+// }
+
+// .cancelBtn {
+//   border: #686868 1px solid !important;
+//   color: rgba(255, 255, 255, .5);
+// }
+
+
+//app component css
+
+
+.container {
+  display: flex;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.left {
+  padding: 35px;
+  justify-content: stretch;
+  background-image: url('./assets/queue.jpg');
+}
+
+
+.right {
+  padding: 35px;
+  justify-content: stretch;
+}
+
+
+.titleBar {
+    min-height: 100%;
+    color: black;
+  }

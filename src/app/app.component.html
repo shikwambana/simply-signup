@@ -1,10 +1,16 @@
-<div fxLayout="column wrap" class="outerContainer" fxFill fxFlex="100">
-  <div fxLayout="column wrap" >
-    <h1>Simply Signup</h1>
+<div class="container" fxLayout="row wrap" fxLayout.lt-md="column" fxFlex="100" fxFill>
+  <div class="left" fxLayoutAlign="start start" fxLayout="column wrap" fxFlex="50" fxFlex.md="100">
+    <div class="titleBar" fxLayoutAlign="start start" fxLayout="column wrap">
+      <h1>Queue Master</h1>
+      <p>When you just can't wait</p>
+      <p>We will</p>
+
+    </div>
   </div>
-  <div>
+  <div class="right" fxLayoutAlign="center center" fxLayout="column wrap" fxFlex="50" fxFlex.xs="100" fxFill>
     <router-outlet></router-outlet>
+    <div class="social">
+      <a href="https://shikwambana.info">Alphie shikwambana</a>
+    </div>
   </div>
-
 </div>
-

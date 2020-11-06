@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatFormFieldModule, MatInputModule } from "@angular/material";
+import { MatInputModule, MatFormFieldModule, MatButtonModule, MatDatepickerModule, MatNativeDateModule, MatStepperModule, MatSelectModule, MatIconModule, MatSnackBarModule, MatPaginatorModule, MatCheckboxModule, MatDialogModule } from "@angular/material";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,17 @@ import { MatFormFieldModule, MatInputModule } from "@angular/material";
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatPaginatorModule,
+    MatCheckboxModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
