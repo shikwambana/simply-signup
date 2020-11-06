@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "queue-master",
-    "public": "dist",
+    "public": "dist/simply-signup",
     "ignore": [
       "firebase.json",
       "**/.*",
