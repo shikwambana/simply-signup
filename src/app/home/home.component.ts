@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
       firstName: ['', Validators.required],
       surname: ['', Validators.required],
       phoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       gender: ['', Validators.required],
       acceptContact: [false, Validators.requiredTrue]
     })
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     this.submit = true;
 
     // stop here if form is invalid
-    if (this.registerForm.invalid) {
+    if (!this.registerForm.valid) {
       return;
     }
 
