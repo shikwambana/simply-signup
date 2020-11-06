@@ -8,10 +8,9 @@ import { FormBuilder, FormGroup, Validators, FormControlName } from '@angular/fo
 })
 export class HomeComponent implements OnInit {
 
-  // @Input() formControlName : formControlName;
+  loading: boolean = false;
   registerForm: FormGroup;
-  submit = false;
-  gender = ['Male', 'Female', 'I\'d rather not say']
+  submit: boolean = false;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -37,14 +36,14 @@ export class HomeComponent implements OnInit {
       return;
     }
 
+    this.loading = true
     // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    setTimeout(() => {
+      this.loading = false
+      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    }, 5000);
   }
 
-  
-  public hasError(control: string, error: string){
-    return this.registerForm.controls[control].hasError(error);
-  }
 }
 
 

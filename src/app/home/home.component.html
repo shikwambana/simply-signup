@@ -61,7 +61,8 @@
                 </div>
 
                 <div fxLayout="row wrap" fxLayoutAlign="start center">
-                    <button style="background: forestgreen;" mat-raised-button>Submit</button>
+                    <button style="background: forestgreen;" [disabled]="registerForm.invalid || loading" mat-raised-button>Submit</button>
+                    <div class="lds-ellipsis" *ngIf="loading"><div></div><div></div><div></div><div></div></div>
                 </div>
 
             </div>
