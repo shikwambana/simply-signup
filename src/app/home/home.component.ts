@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     this.registerForm = this.fb.group({
       firstName: ['', Validators.required],
       surname: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
+      phoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       email: ['', [Validators.required, Validators.email]],
       gender: ['', Validators.required],
       acceptContact: [false, Validators.requiredTrue]
