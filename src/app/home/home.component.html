@@ -1,3 +1,64 @@
-<div  fxLayoutAlign="center center" fxLayout="column wrap" fxFlex="100">
+<div fxLayout="column wrap" fxLayoutAlign.md="center center">
+    <div  fxLayoutAlign="start center" fxLayout="row wrap">
+        <h1>Queue Master</h1>
+        <p>We wait; when you can't</p>
+    </div>
+    <div>
 
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div fxLayoutAlign="center start" fxLayout="column wrap" fxFlex="100" fxLayoutGap="10px">
+
+                <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start center">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="firstName" name="name">
+                        <mat-error *ngIf="submit && hasError('firstName','required')">Enter your name</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Surname</mat-label>
+                        <input matInput formControlName="surname" name="surname">
+                        <mat-error *ngIf="submit && hasError('surame','required')">Enter your surname</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start center">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input matInput formControlName="phoneNumber" name="phoneNumber">
+                        <mat-error *ngIf="submit && hasError('phoneNumber','required')">Enter a valid South African phone number</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput formControlName="email" name="address">
+                        <mat-error *ngIf="submit && hasError('email','required')">Enter a valid email</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start center">
+                    <span>
+                        Gender :
+                    </span>
+
+                    <mat-radio-group aria-label="Select an option" formControlName="gender">
+                        <mat-radio-button value="Male">Male</mat-radio-button>
+                        <mat-radio-button value="Female">Female</mat-radio-button>
+                        <mat-radio-button value="I\'d rather not say">I'd rather not say</mat-radio-button>
+                    </mat-radio-group>
+                    <mat-error *ngIf="submit && hasError('gender','required')">Select a gender</mat-error>
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutAlign="start center">
+                    <mat-checkbox formControlName="acceptContact">You can contact me for more offers</mat-checkbox>
+                    <mat-error *ngIf="submit && hasError('acceptContact','required')">You need to give consent to be contacted</mat-error>
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutAlign="start center">
+                    <button mat-raised-button>Submit</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
 </div>

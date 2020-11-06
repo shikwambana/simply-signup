@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatInputModule, MatFormFieldModule, MatButtonModule, MatDatepickerModule, MatNativeDateModule, MatStepperModule, MatSelectModule, MatIconModule, MatSnackBarModule, MatPaginatorModule, MatCheckboxModule, MatDialogModule } from "@angular/material";
+import { MatInputModule, MatFormFieldModule, MatButtonModule, MatDatepickerModule, MatNativeDateModule, MatStepperModule, MatSelectModule, MatIconModule, MatSnackBarModule, MatPaginatorModule, MatCheckboxModule, MatDialogModule, MatRadioModule } from "@angular/material";
+import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,10 @@ import { MatInputModule, MatFormFieldModule, MatButtonModule, MatDatepickerModul
     MatSnackBarModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatRadioModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
